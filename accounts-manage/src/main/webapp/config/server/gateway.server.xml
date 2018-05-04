@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<servers>
+	<!-- serverName-网关服务名，serverClass-网关服务类，orderClass-订单类，notifyUrl-异步通知url -->
+	<server serverName="" serverClass="" orderClass="" notifyUrl="">
+		<params>
+			<!-- 附加参数：key-键名，value-值 -->
+			<key-item key="trate_starttime" value="TRADE_STARTTIME" />
+			<key-item key="trate_endtime" value="TRADE_ENDTIME" />
+		</params>
+	</server>
+</servers>

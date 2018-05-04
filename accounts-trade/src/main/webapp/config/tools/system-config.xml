@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<system-config>
+
+    <!-- 系统默认字符集 -->
+    <defaultCharset>utf-8</defaultCharset>
+
+    <!-- 自动删除临时文件等待时间，单位：毫秒 -->
+    <DeleteWaitTime>1200000</DeleteWaitTime>
+
+    <!-- 数据源配置，系统默认使用0号数据源，必须有0号数据源系统才能正常运行 -->
+    <!-- dbtype 针对不同类型数据库进行优化，目前支持：mysql，mssql，oracle -->
+    <DataBaseConfig>
+        <connection connectionNo="0" isDefault="true" name="系统默认数据源" className="com.mysql.jdbc.Driver"
+                    resourceName="BoneCP_DS_system_local" dbtype="mysql" poolName="bonecptrade_sys"/>
+        <connection connectionNo="1" name="账务系统交易库数据源" className="com.mysql.jdbc.Driver"
+                    resourceName="BoneCP_DS_account_local" dbtype="mysql" poolName="bonecptrade_acc"/>
+        <connection connectionNo="2" name="账务系统管理库数据源" className="com.mysql.jdbc.Driver"
+                    resourceName="BoneCP_DS_manage_local" dbtype="mysql" poolName="bonecptrade_mng"/>
+    </DataBaseConfig>
+
+    <!-- 加密解密模块 keyDelayTime：密钥使用延迟时间，单位毫秒，默认2分钟；expirationTime：密钥过期时间，默认30分钟；
+    storageMode：密钥存储类型，1-内存，2-文件，3-数据库；
+    storageParam：存储参数，storageMode为2或3时有效
+        storageMode为2时，密钥持久化保存的路径（相对路径或平台标准的绝对路劲）
+        storageMode为3时，数据源编号，不设置的话为系统默认数据源
+    tablename：表名，storageMode为3时有效
+    keyCol：存放键的列名，storageMode为3时有效
+    objCol：存放密钥序列化值得列名，storageMode为3时有效 -->
+    <Security keyDelayTime="120000" expirationTime="1800000" storageMode="1" storageParam="/files/tmp/key"
+              tablename="t_test" keyCol="id" objCol="okeys"/>
+
+    <!-- 线程池配置 enabled是否启用，spacingTime循环扫描队列间隔时间，maxThreadNumber池中最大线程数 -->
+    <ThreadPool enabled="true" spacingTime="3000" maxThreadNumber="50"/>
+</system-config>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<initFunctionConfig>
+    <!-- <function name="测试启动服务" classname="com.acp.ztest.Test" -->
+    <!-- method="load"> -->
+    <!-- <param type="String" value="90" /> -->
+    <!-- <param type="int" value="90" /> -->
+    <!-- <param type="char" value="0" /> -->
+    <!-- <param type="float" value="90" /> -->
+    <!-- <param type="double" value="90" /> -->
+    <!-- <param type="long" value="0" /> -->
+    <!-- </function> -->
+    <!--<function name="初始化测试类"-->
+    <!--classname="com.acp.ztest.Test" method="testMySQL"/>-->
+    <function name="初始化服务" classname="com.olink.account.batch.init.InitServer" method="doInit"/>
+</initFunctionConfig>
