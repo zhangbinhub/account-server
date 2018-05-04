@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<client>
+    <!-- serverNo-网关服务端序号，timeout-请求超时时间单位毫秒，url-网关服务端地址，tradeKey-签名密钥（uuid，可为空字符串或者不配置） -->
+    <!--<server serverNo="0" timeout="30000"-->
+            <!--url="http://127.0.0.1:8080/acp/ctrl/gateway" tradeKey=""/>-->
+</client>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<udp-config>
+    <!-- name 服务名称，enabled 是否启用，port 监听端口号，isHex 接收报文是否是十六进制：true|false ，responseClass
+        报文接收处理类 , charset 服务使用字符集，为空或不设置则系统默认字符集 -->
+    <!--<listen name="testUdpSocket" enabled="false" port="9999" isHex="false"-->
+            <!--responseClass="com.acp.ztest.TestSocketResponse" charset="utf-8"/>-->
+</udp-config>

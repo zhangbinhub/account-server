@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- packageLog：是否开启报文收发日志；allowGet：是否开启get请求；jsonKey：get请求时的参数key -->
+<servers packageLog="true" allowGet="false" jsonKey="json">
+    <!-- serverno：接口服务编号；serverClass：接口类名；
+    isBack：是否是后台调用接口；isValidate：是否使用摘要算法对报文完整性进行验证；
+    isCheckRepeat：是否进行重复请求限制；minSpacingTime：重复请求的间隔时间，单位毫秒，默认2分钟：120000；
+    isValidateAccountDate：是否校验会计日期；-->
+    <!-- 批量任务交易处理 -->
+    <server serverno="back_1003" isBack="true" isValidate="true" isCheckRepeat="true" minSpacingTime="120000"
+            isValidateAccountDate="false"
+            serverClass="com.olink.account.batch.servers.BatchTaskServer"/>
+</servers>

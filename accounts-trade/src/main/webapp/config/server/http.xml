@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<http-config>
+    <!-- http请求配置 appIdName=应用编号在参数中的键名称 -->
+    <appIdName>appid</appIdName>
+
+    <!-- http请求配置 dbnoName=数据源编号在参数中的键名称 -->
+    <dbnoName>app_dbno</dbnoName>
+
+    <!-- http请求配置 operatorIdName=操作者ID在参数中的键名称 -->
+    <operatorIdName>operatorId</operatorIdName>
+
+    <!-- 在线用户清理服务 enabled是否启用，spacingTime执行间隔时间单位：毫秒，onlineTimeout在线用户超时时间单位：毫秒，tablename在线用户记录表名称，colname最后操作时间字段名
+        存储数据格式：yyyy-MM-dd HH:mm:ss -->
+    <OnlineServer enabled="false" spacingTime="3000" onlineTimeout="3600000" tablename="T_Online_User"
+                  colname="last_active_time"/>
+
+    <noFilters>
+        <!-- 不拦截的url关键字，可以有多条 -->
+        <urlKeyWord value="/ctrl/"/>
+    </noFilters>
+</http-config>

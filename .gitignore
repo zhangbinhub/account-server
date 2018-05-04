@@ -1,0 +1,14 @@
+# Intellij IDEA
+.idea
+.gradle
+.svn
+.git
+
+out/
+build/
+logs/
+target/
+
+# OSX
+#
+.DS_Store

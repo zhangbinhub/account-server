@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<servlet-config>
+    <!-- <server name="download" classname="com.acp.business.file.DownLoadFile" -->
+    <!-- method="doDownLoad"> -->
+    <!-- <param type="String" value="90" /> -->
+    <!-- <param type="int" value="90" /> -->
+    <!-- <param type="char" value="0" /> -->
+    <!-- <param type="float" value="90" /> -->
+    <!-- <param type="double" value="90" /> -->
+    <!-- <param type="long" value="0" /> -->
+    <!-- </server> -->
+    <!--<server name="gateway" classname="pers.acp.gateway.server.GateWayServer"-->
+    <!--method="CallGateWay">-->
+    <!--</server>-->
+    <server name="doAccount" classname="com.olink.account.main.MainServlet" method="main"/>
+</servlet-config>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- packageLog：是否开启报文收发日志；allowGet：是否开启get请求；jsonKey：get请求时的参数key -->
+<servers packageLog="true" allowGet="false" jsonKey="json">
+    <!-- serverno：接口服务编号；serverClass：接口类名；
+    isBack：是否是后台调用接口；isValidate：是否使用摘要算法对报文完整性进行验证；
+    isCheckRepeat：是否进行重复请求限制；minSpacingTime：重复请求的间隔时间，单位毫秒，默认2分钟：120000；
+    isValidateAccountDate：是否校验会计日期；-->
+    <!-- B户交易处理及特殊交易 -->
+    <server serverno="back_1001" isBack="true" isValidate="true" isCheckRepeat="true" minSpacingTime="120000"
+            isValidateAccountDate="true"
+            serverClass="com.olink.account.trade.servers.BackInnerServer"/>
+    <!-- C户交易处理 -->
+    <server serverno="back_1002" isBack="true" isValidate="true" isCheckRepeat="true" minSpacingTime="120000"
+            isValidateAccountDate="true"
+            serverClass="com.olink.account.trade.servers.BackCustomerServer"/>
+    <!-- 信息查询 -->
+    <server serverno="cust_1000" isBack="false" isValidate="false" isCheckRepeat="false" minSpacingTime="120000"
+            isValidateAccountDate="false"
+            serverClass="com.olink.account.trade.servers.CustomerServer"/>
+    <!-- 信息维护 -->
+    <server serverno="cust_1001" isBack="false" isValidate="false" isCheckRepeat="false" minSpacingTime="120000"
+            isValidateAccountDate="false"
+            serverClass="com.olink.account.trade.servers.CustomerMngServer"/>
+    <!-- 人民币交易 -->
+    <server serverno="cust_1002" isBack="false" isValidate="false" isCheckRepeat="true" minSpacingTime="120000"
+            isValidateAccountDate="true"
+            serverClass="com.olink.account.trade.servers.CustomerPayServer"/>
+    <!-- 积分 -->
+    <server serverno="cust_1003" isBack="false" isValidate="false" isCheckRepeat="true" minSpacingTime="120000"
+            isValidateAccountDate="true"
+            serverClass="com.olink.account.trade.servers.IntegralServer"/>
+    <!-- 电子券交易 -->
+    <server serverno="cust_1004" isBack="false" isValidate="false" isCheckRepeat="true" minSpacingTime="120000"
+            isValidateAccountDate="true"
+            serverClass="com.olink.account.trade.servers.CurrencyServer"/>
+    <!-- 二级商户交易 -->
+    <server serverno="business_1001" isBack="false" isValidate="false" isCheckRepeat="true" minSpacingTime="120000"
+            isValidateAccountDate="true"
+            serverClass="com.olink.account.trade.servers.BusinessServer"/>
+</servers>

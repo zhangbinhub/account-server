@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<main-server>
+
+    <!-- circleType-循环执行周期（不区分大小写）：
+    Time-周期按时间来计算， Day-每天执行一次， Week-每周执行一次，
+    Month-每月执行一次， Quarter-每个季度执行一次， Year-每年执行一次 -->
+    <circleType>Day</circleType>
+
+    <!-- excuteType-执行类型（不区分大小写）：WeekDay-工作日，Weekend-周末，All-全部 -->
+    <excuteType>All</excuteType>
+
+    <!-- rule-执行规则：
+    当 circleType=Time 时：开始执行时间（HH:MI:SS）（没有则表示当前时间为开始时间）|执行间隔（单位毫秒）
+    例：“3000”或“23:00:00|3000”
+    注：当开始执行时间小于当前时间时，计算出开始执行时间至当前时间范围内需要执行的次数，并立即循环执行
+
+    当 circleType=Day 时：时间（HH:MI:SS）
+    例：“23:00:00”
+
+    当 circleType=Week 时：周几|时间（1|HH:MI:SS），周一为1，周日为7
+    例：“1|23:00:00”
+
+    当 circleType=Month 时：几号|时间（31|HH:MI:SS），如果目标月最大天数小于日号，则在当月最后一天执行
+    例：“31|23:00:00”
+
+    当 circleType=Quarter 时：季度内第几月|几号|时间（3|31|HH:MI:SS），如果目标月最大天数小于日号，则在当月最后一天执行
+    例：“3|31|23:00:00”
+
+    当 circleType=Year 时：第几月|几号|时间（12|31|HH:MI:SS），如果目标月最大天数小于日号，则在当月最后一天执行
+    例：“12|31|23:00:00” -->
+    <rule>00:00:00</rule>
+
+    <!-- 批量任务jar包路径，相对于webroot -->
+    <taskJarPath>/files/resource/task</taskJarPath>
+
+</main-server>

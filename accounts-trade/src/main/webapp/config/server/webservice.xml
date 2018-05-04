@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webservice-config>
+	<!-- class webservice类，href 访问地址 http://host:port -->
+	<!--<server class="com.acp.ztest.TestWebService" href="http://127.0.0.1:8081/acp/ws"/>-->
+</webservice-config>
